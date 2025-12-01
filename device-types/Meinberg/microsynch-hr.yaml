@@ -1,0 +1,58 @@
+---
+manufacturer: Meinberg
+model: microSyncHR
+slug: meinberg-microsync-hr
+u_height: 1
+is_full_depth: false
+is_half_depth: true
+airflow: passive
+subdevice_role: parent
+console-ports:
+  - name: Console
+    type: usb-micro-b
+interfaces:
+  - name: LAN 0
+    type: 1000base-t
+    label: MNG/NTP (RJ45)
+    description: Management/NTP Port
+  - name: LAN 1
+    type: 1000base-t
+    label: MNG/NTP (RJ45)
+    description: Management/NTP Port
+  - name: LAN 2
+    type: 1000base-t
+    label: MNG/NTP/PTP (RJ45)
+    description: PTP Grandmaster/NTP Port
+  - name: LAN 3
+    type: 1000base-t
+    label: MNG/NTP/PTP (RJ45)
+    description: PTP Grandmaster/NTP Port
+  - name: PTP/NTP SFP 0
+    type: 1000base-x-sfpp
+    label: LAN 0/1 SFP Slot
+    description: SFP Slot for LAN 0 or LAN 1
+  - name: PTP/NTP SFP 1
+    type: 1000base-x-sfpp
+    label: LAN 2/3 SFP Slot
+    description: SFP Slot for LAN 2 or LAN 3
+module-bays:
+  - name: GNSS Antenna
+    type: bnc
+    description: GNSS Antenna Input (e.g., GPS, GLONASS, Galileo)
+  - name: PPS/10MHz 1
+    type: bnc
+    description: Programmable Pulse/Frequency Output
+  - name: PPS/10MHz 2
+    type: bnc
+    description: Programmable Pulse/Frequency Output
+  - name: DC Power (X1)
+    type: terminal-block-16
+    description: Primary DC Power Input (20-60 V DC)
+power-ports:
+  - name: PWR1 DC
+    type: dc-terminal
+usb-ports:
+  - name: USB Host
+    type: usb-a
+    description: USB Type A port for management/data transfer
+comments: '[Meinberg microSyncHR Product Page](https://www.meinbergglobal.com/english/products/synchronization-system-half-rack-chassis.htm)'
